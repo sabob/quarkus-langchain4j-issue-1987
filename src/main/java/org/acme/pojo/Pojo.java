@@ -1,4 +1,4 @@
-package org.acme;
+package org.acme.pojo;
 
 public class Pojo {
 

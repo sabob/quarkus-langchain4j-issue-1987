@@ -1,4 +1,4 @@
-package org.acme;
+package org.acme.pojo;
 
 import java.util.List;
 
