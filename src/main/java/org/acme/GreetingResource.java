@@ -18,7 +18,7 @@ public class GreetingResource {
     @GET
     @Produces(MediaType.TEXT_PLAIN)
     public String ping() {
-        Result<String> result = agent.chat("Call all tools available to you at least once");
+        Result<String> result = agent.chat("Call the tool called get_name_from_argument_list");
         String content = result.toolExecutions().get(0).result();
         return content;
     }

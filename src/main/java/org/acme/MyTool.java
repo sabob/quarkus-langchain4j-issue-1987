@@ -4,6 +4,7 @@ import dev.langchain4j.agent.tool.ReturnBehavior;
 import dev.langchain4j.agent.tool.Tool;
 import jakarta.enterprise.context.ApplicationScoped;
 
+import java.sql.Wrapper;
 import java.util.List;
 
 @ApplicationScoped
@@ -20,14 +21,14 @@ public class MyTool {
     }
 
     @Tool(
-            name = "get_name_from_argument",
-            value = "Provide a list of names in this pojo. Use any random names you want",
+            name = "get_name_from_argument_list",
+            value = "Provide a Wrapper pojo containing a list of POJOs with a name property. Use any random names you want",
             returnBehavior = ReturnBehavior.IMMEDIATE
     )
     public String listOfPojos(List<Pojo> pojos) {
 
         StringBuilder sb = new StringBuilder();
-        for(Pojo pojo : pojos) {
+        for (Pojo pojo : pojos) {
             sb.append(pojo);
         }
         return toString().toString();

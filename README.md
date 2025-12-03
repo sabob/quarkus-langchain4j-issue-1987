@@ -16,3 +16,4 @@ is in unnamed module of loader io.quarkus.bootstrap.classloading.QuarkusClassLoa
 	at org.acme.MyTool.getName(MyTool.java:30)
 ```
 
+Workaround is to wrap the List in another Pojo.
